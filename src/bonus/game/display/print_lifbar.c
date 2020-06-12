@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/12 11:45:48 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 17:15:35 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/12 18:44:11 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,11 @@ static void		print(t_image *lb, t_cub3d *cub)
 				cub->tex.lifbar.tiadr[(cub->tex.lifbar.img_h * y) / lb->img_h]
 									[(cub->tex.lifbar.img_w * x) / lb->img_w]);
 			if ((unsigned int)color != 0xFF3F48CC && cub->boolimg == 1)
-				my_mlx_pixel_put(&cub->img, x, cub->pars.scrheight - (lb->img_h + 2) + y, color);
+				my_mlx_pixel_put(&cub->img, x,
+							cub->pars.scrheight - (lb->img_h + 2) + y, color);
 			if ((unsigned int)color != 0xFF3F48CC && cub->boolimg == 2)
-				my_mlx_pixel_put(&cub->img2, x, cub->pars.scrheight - (lb->img_h + 2) + y, color);
+				my_mlx_pixel_put(&cub->img2, x,
+							cub->pars.scrheight - (lb->img_h + 2) + y, color);
 			x++;
 		}
 		y++;

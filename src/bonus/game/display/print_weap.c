@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 19:55:26 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 17:05:24 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/12 18:43:46 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,11 @@ static void		print(t_image *weap, t_cub3d *cub)
 				cub->tex.weap.tiadr[(cub->tex.weap.img_h * y) / weap->img_h]
 									[(cub->tex.weap.img_w * x) / weap->img_w]);
 			if ((unsigned int)color != 0xFF2232CD && cub->boolimg == 1)
-				my_mlx_pixel_put(&cub->img, weap->img_w + x, weap->img_h + y, color);
+				my_mlx_pixel_put(&cub->img, weap->img_w + x,
+									weap->img_h + y, color);
 			if ((unsigned int)color != 0xFF2232CD && cub->boolimg == 2)
-				my_mlx_pixel_put(&cub->img2, weap->img_w + x, weap->img_h + y, color);
+				my_mlx_pixel_put(&cub->img2, weap->img_w + x,
+									weap->img_h + y, color);
 			x++;
 		}
 		y++;

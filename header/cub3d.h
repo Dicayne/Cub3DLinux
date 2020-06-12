@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 17:13:04 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 17:54:53 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/12 18:47:16 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@
 # include "../Libft/header/libft.h"
 # include "color.h"
 # include "struct.h"
+
 /*
 ** ---------------------PARSING---------------------
 */
@@ -44,7 +45,7 @@ int				check_map(t_map *map, t_path *pars);
 int				check_closed_map(t_map *map, int y, int x);
 void			init_struct_pars(t_path *pars, t_map *map);
 t_sp			*fill_sprit(t_map *map, int nb_sprit);
-void			set_ret_error(int* ret, t_path *pars);
+void			set_ret_error(int *ret, t_path *pars);
 /*
 ** -----------------------GAME----------------------
 ** RAY_CAST
@@ -92,8 +93,8 @@ void			check_key_on(t_cub3d *cub);
 void			init_move_ev(t_move	*move);
 void			init_speed(t_speed *spe);
 int				key_hook(int keycode, t_cub3d *cub);
-int				mouse_hook(int button, int x,int y, t_cub3d *cub);
-int				check_wall(int x,int y, t_cub3d *cub);
+int				mouse_hook(int button, int x, int y, t_cub3d *cub);
+int				check_wall(int x, int y, t_cub3d *cub);
 int				key_release(int keycode, t_move *move);
 void			move_w_s(t_cub3d *cub, int keycode);
 void			move_a_d(t_cub3d *cub, int keycode);

@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 14:01:58 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 16:11:44 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/12 18:42:05 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static void	find_color(int side, t_print *print, t_cub3d *cub)
 		print->color = darkness_mode(print->color, print->wall_dist);
 }
 
-void	print_img3_1(t_print *print, t_cub3d *cub, int side, int x)
+void		print_img3_1(t_print *print, t_cub3d *cub, int side, int x)
 {
 	while (print->start < print->draw_start)
 	{
@@ -61,7 +61,7 @@ void	print_img3_1(t_print *print, t_cub3d *cub, int side, int x)
 	}
 }
 
-void	print_img3_2(t_print *print, t_cub3d *cub, int side, int x)
+void		print_img3_2(t_print *print, t_cub3d *cub, int side, int x)
 {
 	while (print->start < print->draw_start)
 	{
@@ -83,7 +83,8 @@ void	print_img3_2(t_print *print, t_cub3d *cub, int side, int x)
 		if (cub->move.dm == 1)
 			my_mlx_pixel_put(&cub->img2, x, print->draw_end, 0);
 		else
-			my_mlx_pixel_put(&cub->img2, x, print->draw_end, print->color_floor);
+			my_mlx_pixel_put(&cub->img2, x, print->draw_end,
+								print->color_floor);
 		print->draw_end++;
 	}
 }

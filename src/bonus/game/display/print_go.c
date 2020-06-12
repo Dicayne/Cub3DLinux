@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/12 13:55:46 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 18:13:32 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/12 18:43:01 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ static void		print_2(t_image *g_o, t_cub3d *cub, t_coor_vec l, int color)
 
 static void		print(t_image *g_o, t_cub3d *cub, int bool)
 {
-	t_coor_vec l;
-	int color;
+	t_coor_vec	l;
+	int			color;
 
 	l.y_i = 0;
 	while (l.y_i < g_o->img_h)
@@ -44,12 +44,12 @@ static void		print(t_image *g_o, t_cub3d *cub, int bool)
 		{
 			if (bool == 0)
 				color = mlx_get_color_value(cub->map.mlx_ptr,
-					cub->tex.g_o.tiadr[(cub->tex.g_o.img_h * l.y_i) / g_o->img_h]
-								[(cub->tex.g_o.img_w * l.x_i) / g_o->img_w]);
+				cub->tex.g_o.tiadr[(cub->tex.g_o.img_h * l.y_i) / g_o->img_h]
+							[(cub->tex.g_o.img_w * l.x_i) / g_o->img_w]);
 			else if (bool == 1)
 				color = mlx_get_color_value(cub->map.mlx_ptr,
-					cub->tex.y_w.tiadr[(cub->tex.y_w.img_h * l.y_i) / g_o->img_h]
-								[(cub->tex.y_w.img_w * l.x_i) / g_o->img_w]);
+				cub->tex.y_w.tiadr[(cub->tex.y_w.img_h * l.y_i) / g_o->img_h]
+							[(cub->tex.y_w.img_w * l.x_i) / g_o->img_w]);
 			if ((unsigned int)color != 0xFF3F48CC)
 				print_2(g_o, cub, l, color);
 			l.x_i++;

@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 14:34:06 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 15:40:28 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/12 18:47:36 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 typedef struct	s_sp
 {
-	double x;
-	double y;
-	int bool;
+	double	x;
+	double	y;
+	int		bool;
 }				t_sp;
 typedef struct	s_print
 {
