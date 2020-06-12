@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 15:00:34 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 16:05:16 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 00:44:05 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int			refresh(t_cub3d *cub)
 		cub->boolimg = 2;
 	else if (cub->boolimg == 2)
 		cub->boolimg = 1;
-	mlx_clear_window(cub->map.mlx_ptr, cub->map.mlx_win);
 	ray_cast(cub);
 	return (0);
 }
