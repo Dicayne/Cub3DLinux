@@ -30,6 +30,7 @@ void		init_struct_pars(t_path *pars, t_map *map)
 	map->pos_y = -1;
 	map->dir = '\0';
 	map->nb_sprit = 0;
+	map->bool_sprit = 1;
 }
 
 static void	free_map(t_map *map)
@@ -77,5 +78,6 @@ void		free_struct(t_path *pars, t_map *map)
 	pars->error != NULL ? free(pars->error) : pars->error;
 	if (map->x != 0)
 		free_map(map);
-	free(map->sprit);
+	if (map->bool_sprit == 0)
+		free(map->sprit);
 }

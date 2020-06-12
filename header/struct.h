@@ -59,6 +59,7 @@ typedef struct	s_map
 	double	pos_y;
 	char	dir;
 	int		nb_sprit;
+	int		bool_sprit;
 	int		nb_goal;
 	int		nb_goal_start;
 	t_sp	*sprit;

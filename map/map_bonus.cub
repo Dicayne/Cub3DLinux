@@ -1,5 +1,5 @@
 R 500 500
-NO ./texture/wall_texture/wood_wall.xpm
+NO ./texture/wall_texture/wood_wall.xp
 SO ./texture/wall_texture/wood_wall2.xpm
 WE ./texture/wall_texture/dalles.xpm
 EA ./texture/wall_texture/red_brick.xpm

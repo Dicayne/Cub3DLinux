@@ -102,6 +102,9 @@ int				check_map(t_map *map, t_path *pars)
 		return (-1);
 	from_8_to_1(map);
 	if (map->nb_sprit > 0)
+	{
+		map->bool_sprit = 0;
 		map->sprit = fill_sprit(map, map->nb_sprit);
+	}
 	return (0);
 }

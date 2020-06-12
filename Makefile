@@ -123,8 +123,8 @@ $(BONUS) : %.o: %.c
 	printf "$(CYAN).$(NC)"
 
 $(NAME) : complib echoCLM compmlx echoOK echoCSM echoCL $(OBJS) echoOK echoCS
-	$(CC) -O3 $(CFLAGS) -flto -march=native -o $@ $(OBJS) $(OBJLIB) $(MLX)libmlx.a -lm -lXext -lX11
-	#$(CC) $(CFLAGS) -o $@ $(OBJS) $(OBJLIB) -g3 -fsanitize=address -L ./ -lmlx
+	#$(CC) -O3 $(CFLAGS) -flto -march=native -o $@ $(OBJS) $(OBJLIB) $(MLX)libmlx.a -lm -lXext -lX11
+	$(CC) -O3 $(CFLAGS) -flto -march=native -o $@ $(OBJS) $(OBJLIB) $(MLX)libmlx.a -lm -lXext -lX11 -g3 -fsanitize=address
 
 bonus : complib echoCLM compmlx echoOK echoCSM echoCL $(BONUS) echoOK echoCS
 	$(CC) -O3 $(CFLAGS) -flto -march=native -o Cub3D $(BONUS) $(OBJLIB) $(MLX)libmlx.a -lm -lXext -lX11
