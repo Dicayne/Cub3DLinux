@@ -19,7 +19,7 @@ int			close_prog(t_cub3d *cub)
 	mlx_destroy_window(cub->map.mlx_ptr, cub->map.mlx_win);
 	free_struct(&cub->pars, &cub->map);
 	if (cub->tex.weap.path != NULL)
-		free_img(&cub->tex.weap);
+		mlx_destroy_image(cub->map.mlx_ptr, cub->tex.weap.img);
 	exit(EXIT_SUCCESS);
 	return (0);
 }

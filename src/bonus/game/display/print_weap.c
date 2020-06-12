@@ -16,6 +16,7 @@ static void		init_weap(t_cub3d *cub)
 {
 	free(cub->tex.weap.path);
 	free_tab_int(&cub->tex.weap);
+	mlx_destroy_image(cub->map.mlx_ptr, cub->tex.weap.img);
 	if (cub->move.shot == 0)
 		cub->tex.weap.path = ft_strdup("./texture/sprite/shotgun.xpm");
 	else
@@ -32,6 +33,7 @@ static void		init_img_weap(t_cub3d *cub, t_image *weap)
 	weap->img = mlx_new_image(cub->map.mlx_ptr, weap->img_w, weap->img_h);
 	weap->adr = mlx_get_data_addr(weap->img, &weap->bits_per_pixel,
 					&weap->line_length, &weap->endian);
+	weap->path = NULL;
 }
 
 static void		print(t_image *weap, t_cub3d *cub)
@@ -68,5 +70,5 @@ void			print_weap(t_cub3d *cub)
 	init_weap(cub);
 	init_img_weap(cub, &weap);
 	print(&weap, cub);
-	free_img(&weap);
+	mlx_destroy_image(cub->map.mlx_ptr, weap.img);
 }

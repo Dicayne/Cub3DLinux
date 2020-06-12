@@ -68,4 +68,5 @@ void			print_over_win(t_cub3d *cub, int bool)
 		cub->tex.g_o.g_o = 0;
 	else if (bool == 1)
 		cub->tex.y_w.g_o = 0;
+	mlx_destroy_image(cub->map.mlx_ptr, g_o.img);
 }

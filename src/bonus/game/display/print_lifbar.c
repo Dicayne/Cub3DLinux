@@ -16,6 +16,7 @@ static void		init_lb(t_cub3d *cub)
 {
 	free(cub->tex.lifbar.path);
 	free_tab_int(&cub->tex.lifbar);
+	mlx_destroy_image(cub->map.mlx_ptr, cub->tex.lifbar.img);
 	if (cub->tex.lifbar.hp == 6)
 		cub->tex.lifbar.path = ft_strdup("./texture/lb/LBFull.xpm");
 	else if (cub->tex.lifbar.hp == 5)
@@ -79,5 +80,5 @@ void			print_lifebarre(t_cub3d *cub)
 	init_lb(cub);
 	init_img_lb(cub, &lb);
 	print(&lb, cub);
-	free_img(&lb);
+	mlx_destroy_image(cub->map.mlx_ptr, lb.img);
 }

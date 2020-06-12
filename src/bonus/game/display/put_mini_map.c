@@ -86,4 +86,5 @@ void			put_mini_map(t_cub3d *cub)
 	base_m_map(cub, &m_map);
 	mlx_put_image_to_window(cub->map.mlx_ptr, cub->map.mlx_win,
 														m_map.img, 0, 0);
+	mlx_destroy_image(cub->map.mlx_ptr, m_map.img);		
 }

@@ -35,7 +35,6 @@ int			refresh(t_cub3d *cub)
 		cub->boolimg = 2;
 	else if (cub->boolimg == 2)
 		cub->boolimg = 1;
-	mlx_clear_window(cub->map.mlx_ptr, cub->map.mlx_win);
 	ray_cast(cub);
 	return (0);
 }
