@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 14:59:41 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/05/27 18:33:16 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 00:17:45 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ void					save(t_cub3d *cub)
 	ft_printf("%s%sSCREENSHOT TAKEN\n", NC, GREEN);
 	ft_printf("%sScreenshot stocked in ==> %s", YELLOW, CYAN);
 	system("cd screenshot && pwd");
-	system("open screenshot/screenshot.bmp");
 	ft_printf("%s", NC);
 	if (cub->pars.save == 1)
 		exit(EXIT_SUCCESS);
