@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/11 19:55:26 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 18:43:46 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 00:42:32 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,5 @@ void			print_weap(t_cub3d *cub)
 	init_weap(cub);
 	init_img_weap(cub, &weap);
 	print(&weap, cub);
+	free_img(&weap);
 }

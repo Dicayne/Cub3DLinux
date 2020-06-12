@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 12:04:21 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/05/27 18:43:25 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 00:39:46 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ static void	check_colision_d(t_cub3d *cub, int *time, double spd)
 				[(int)(cub->map.pos_x + (cub->cast.plane.x_f * spd))] == 2 &&
 					cub->tex.lifbar.hp > 0)
 				cub->tex.lifbar.hp--;
-			ft_putchar('\a');
 			*time = 0;
 		}
 }
@@ -49,7 +48,6 @@ static void	check_colision_a(t_cub3d *cub, int *time, double spd)
 				[(int)(cub->map.pos_x - (cub->cast.plane.x_f * spd))] == 2 &&
 					cub->tex.lifbar.hp > 0)
 				cub->tex.lifbar.hp--;
-			ft_putchar('\a');
 			*time = 0;
 		}
 }

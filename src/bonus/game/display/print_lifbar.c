@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/12 11:45:48 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 18:44:11 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 00:42:11 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,5 @@ void			print_lifebarre(t_cub3d *cub)
 	init_lb(cub);
 	init_img_lb(cub, &lb);
 	print(&lb, cub);
+	free_img(&lb);
 }

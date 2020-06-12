@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 11:55:43 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/05/27 18:53:51 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 00:39:47 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ static void	check_colision_s(t_cub3d *cub, int *time, double spd)
 			if (cub->map.map[(int)(cub->map.pos_y - (cub->cast.dir.y_f * spd))]
 					[(int)(cub->map.pos_x - (cub->cast.dir.x_f * spd))] == 3)
 				find_goal(cub, spd, 's');
-			ft_putchar('\a');
 			*time = 0;
 		}
 }
@@ -57,7 +56,6 @@ static void	check_colision_w(t_cub3d *cub, int *time, double spd)
 			if (cub->map.map[(int)(cub->map.pos_y + (cub->cast.dir.y_f * spd))]
 					[(int)(cub->map.pos_x + (cub->cast.dir.x_f * spd))] == 3)
 				find_goal(cub, spd, 'w');
-			ft_putchar('\a');
 			*time = 0;
 		}
 }
