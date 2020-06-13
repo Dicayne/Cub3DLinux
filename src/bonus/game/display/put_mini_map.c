@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:30:22 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/13 02:33:58 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 02:38:08 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,9 @@ static void		back_map(t_image *m_map, t_cub3d *cub)
 		while (x < m_map->img_w)
 		{
 			if (cub->boolimg == 1)
-				my_mlx_pixel_put(&cub->img, m_map->img_w + x,
-									m_map->img_h + y, color);
+				my_mlx_pixel_put(&cub->img, x, y, color);
 			if (cub->boolimg == 2)
-				my_mlx_pixel_put(&cub->img2, m_map->img_w + x,
-									m_map->img_h + y, color);
+				my_mlx_pixel_put(&cub->img2, x, y, color);
 			x++;
 		}
 		y++;
@@ -91,11 +89,9 @@ static void		base_m_map(t_cub3d *cub, t_image *m_map)
 							[(x * cub->map.x) / m_map->img_w] == 2)
 				color = 0xff;
 			if (cub->boolimg == 1)
-				my_mlx_pixel_put(&cub->img, m_map->img_w + x,
-									m_map->img_h + y, color);
+				my_mlx_pixel_put(&cub->img, x, y, color);
 			if (cub->boolimg == 2)
-				my_mlx_pixel_put(&cub->img2, m_map->img_w + x,
-									m_map->img_h + y, color);
+				my_mlx_pixel_put(&cub->img2, x, y, color);
 			x++;
 		}
 		y++;
