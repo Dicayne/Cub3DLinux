@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 13:34:12 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 17:30:19 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 02:36:30 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ static void	print_hud(t_cub3d *cub)
 {
 	print_weap(cub);
 	print_lifebarre(cub);
+	if (cub->pars.scrheight > 300 && cub->pars.scrwidth > 300)
+		put_mini_map(cub);
 	if (cub->tex.lifbar.hp == 0)
 		print_over_win(cub, 0);
 	if (cub->map.nb_goal_start == 1 && cub->map.nb_goal == 0)
@@ -60,8 +62,6 @@ static void	display_2(t_cub3d *cub)
 	mlx_string_put(cub->map.mlx_ptr, cub->map.mlx_win,
 					cub->pars.scrwidth / 2, cub->pars.scrheight / 2,
 					0xffffff, "X");
-	if (cub->pars.scrheight > 300 && cub->pars.scrwidth > 300)
-		put_mini_map(cub);
 	if (cub->bool == 1)
 		ft_printf("%sGOOD GAME %s:D\n", CYAN, YELLOW);
 	cub->bool = 0;
@@ -78,8 +78,6 @@ void		display(t_cub3d *cub)
 		mlx_string_put(cub->map.mlx_ptr, cub->map.mlx_win,
 						cub->pars.scrwidth / 2, cub->pars.scrheight / 2,
 						0xffffff, "X");
-		if (cub->pars.scrheight > 300 && cub->pars.scrwidth > 300)
-			put_mini_map(cub);
 		if (cub->bool == 1)
 			ft_printf("%sGOOD GAME %s:D\n", CYAN, YELLOW);
 		cub->bool = 0;
