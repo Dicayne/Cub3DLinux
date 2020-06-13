@@ -60,8 +60,8 @@ static void	display_2(t_cub3d *cub)
 	mlx_put_image_to_window(cub->map.mlx_ptr, cub->map.mlx_win,
 				cub->img2.img, 0, 0);
 	mlx_string_put(cub->map.mlx_ptr, cub->map.mlx_win,
-					cub->pars.scrwidth / 2, cub->pars.scrheight / 2,
-					0xffffff, "X");
+					cub->pars.scrwidth / 2, cub->pars.scrheight / 1.7,
+					0xffff, "X");
 	if (cub->bool == 1)
 		ft_printf("%sGOOD GAME %s:D\n", CYAN, YELLOW);
 	cub->bool = 0;
@@ -76,8 +76,8 @@ void		display(t_cub3d *cub)
 		mlx_put_image_to_window(cub->map.mlx_ptr, cub->map.mlx_win,
 					cub->img.img, 0, 0);
 		mlx_string_put(cub->map.mlx_ptr, cub->map.mlx_win,
-						cub->pars.scrwidth / 2, cub->pars.scrheight / 2,
-						0xffffff, "X");
+						cub->pars.scrwidth / 2, cub->pars.scrheight / 1.7,
+						0xffff, "X");
 		if (cub->bool == 1)
 			ft_printf("%sGOOD GAME %s:D\n", CYAN, YELLOW);
 		cub->bool = 0;

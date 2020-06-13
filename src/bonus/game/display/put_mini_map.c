@@ -46,27 +46,16 @@ static void		print_pos(t_cub3d *cub, t_image *m_map)
 	}
 }
 
-static void		back_map(t_image *m_map, t_cub3d *cub)
+static int		set_color_m_map(int x, int y, t_cub3d *cub, t_image *m_map)
 {
-	int x;
-	int y;
-	int color;
-
-	color = 0xa6000000;
-	y = 0;
-	while (y < m_map->img_h)
-	{
-		x = 0;
-		while (x < m_map->img_w)
-		{
-			if (cub->boolimg == 1)
-				my_mlx_pixel_put(&cub->img, x, y, color);
-			if (cub->boolimg == 2)
-				my_mlx_pixel_put(&cub->img2, x, y, color);
-			x++;
-		}
-		y++;
-	}
+	if (cub->map.map[(y * cub->map.y) / m_map->img_h]
+					[(x * cub->map.x) / m_map->img_w] == 1)
+		return (0xff0000);
+	else if (cub->map.map[(y * cub->map.y) / m_map->img_h]
+							[(x * cub->map.x) / m_map->img_w] == 2)
+		return (0xff);
+	else
+		return (0x000000);
 }
 
 static void		base_m_map(t_cub3d *cub, t_image *m_map)
@@ -75,19 +64,13 @@ static void		base_m_map(t_cub3d *cub, t_image *m_map)
 	int y;
 	int color;
 
-	back_map(m_map, cub);
 	y = 0;
 	while (y < m_map->img_h)
 	{
 		x = 0;
 		while (x < m_map->img_w)
 		{
-			if (cub->map.map[(y * cub->map.y) / m_map->img_h]
-							[(x * cub->map.x) / m_map->img_w] == 1)
-				color = 0xff0000;
-			if (cub->map.map[(y * cub->map.y) / m_map->img_h]
-							[(x * cub->map.x) / m_map->img_w] == 2)
-				color = 0xff;
+			color = set_color_m_map(x, y, cub, m_map);
 			if (cub->boolimg == 1)
 				my_mlx_pixel_put(&cub->img, x, y, color);
 			if (cub->boolimg == 2)
