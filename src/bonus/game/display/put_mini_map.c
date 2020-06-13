@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/26 17:30:22 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/13 02:38:08 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/13 02:38:59 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void		back_map(t_image *m_map, t_cub3d *cub)
 	int y;
 	int color;
 
-	color = 0x000000;
+	color = 0xa6000000;
 	y = 0;
 	while (y < m_map->img_h)
 	{
