@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/18 13:57:41 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/18 14:18:38 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/18 20:00:04 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ static int		check_color2(char *str_color)
 	char	**split;
 
 	split = ft_split(str_color, ',');
-	if (check_split(split) == 0)
+	if (split[0] != NULL && split[1] != NULL && split[2] != NULL &&
+		split[3] == NULL)
 	{
-		if (split[0] != NULL && split[1] != NULL && split[2] != NULL &&
-			split[3] == NULL)
+		if (check_split(split) == 0)
 		{
 			r = ft_atoi(split[0]);
 			g = ft_atoi(split[1]);
