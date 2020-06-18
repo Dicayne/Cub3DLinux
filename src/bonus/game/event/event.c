@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 14:45:57 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/13 00:17:53 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/18 14:41:16 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 int			close_prog(t_cub3d *cub)
 {
-	ft_printf("%sSee you soon %s:'( %s\n", CYAN, YELLOW, NC);
-	mlx_clear_window(cub->map.mlx_ptr, cub->map.mlx_win);
-	mlx_destroy_window(cub->map.mlx_ptr, cub->map.mlx_win);
+	if (cub->bool != 4)
+	{
+		ft_printf("%sSee you soon %s:'( %s\n", CYAN, YELLOW, NC);
+		mlx_clear_window(cub->map.mlx_ptr, cub->map.mlx_win);
+		mlx_destroy_window(cub->map.mlx_ptr, cub->map.mlx_win);
+	}
 	free_struct(&cub->pars, &cub->map);
 	if (cub->tex.weap.path != NULL)
 		mlx_destroy_image(cub->map.mlx_ptr, cub->tex.weap.img);
