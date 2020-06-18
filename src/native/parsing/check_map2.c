@@ -76,7 +76,7 @@ static int	check_around(t_map *map, int y, int x)
 		x = 0;
 		while (x < map->x)
 		{
-			if (map->map[y][x] == 0)
+			if (map->map[y][x] == 0 || map->map[y][x] == 2)
 			{
 				if (check_around2(map, y, x) == -1)
 					return (-1);
@@ -92,10 +92,35 @@ static int	check_around(t_map *map, int y, int x)
 	return (0);
 }
 
+void	print_int(t_map *coor)
+{
+	int y;
+	int x;
+
+	y = 0;
+	while (y < coor->y)
+	{
+		x = 0;
+		while (x < coor->x)
+		{
+			ft_putnbr(coor->map[y][x]);
+			x++;
+		}
+		ft_putchar('\n');
+		y++;
+	}
+}
+
 int			check_closed_map(t_map *map, int y, int x)
 {
 	from_0_to_8(map, y, x);
+	print_int(map);
+	printf("\n\n");
 	fill_line_8x0(map, y, x);
+	print_int(map);
+	printf("\n\n");
 	fill_line_8xm0(map, y, x);
+	print_int(map);
+	printf("\n\n");
 	return (check_around(map, y, x));
 }

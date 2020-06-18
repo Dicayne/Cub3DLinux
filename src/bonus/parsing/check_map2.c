@@ -76,7 +76,7 @@ static int	check_around(t_map *map, int y, int x)
 		x = 0;
 		while (x < map->x)
 		{
-			if (map->map[y][x] == 0)
+			if (map->map[y][x] == 0 || map->map[y][x] == 2)
 			{
 				if (check_around2(map, y, x) == -1)
 					return (-1);
