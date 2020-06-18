@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 12:10:14 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/05/27 19:06:20 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/18 14:34:59 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void		free_split(char **split)
 
 static int	pars_texture(char **split, t_path *pars)
 {
+	if (split[1] == NULL)
+		return (-1);
 	if (pars->pars_no == NULL && ft_strcmp(split[0], "NO") == 0)
 		pars->pars_no = ft_strdup(split[1]);
 	else if (pars->pars_so == NULL && ft_strcmp(split[0], "SO") == 0)
@@ -71,7 +73,7 @@ static int	pars_line(char **split, t_path *pars)
 {
 	int ret;
 
-	if (split[0] == '\0')
+	if (split[0] == NULL)
 		ret = 1;
 	else if (ft_strcmp(split[0], "R") == 0)
 		ret = check_reso(split, pars);

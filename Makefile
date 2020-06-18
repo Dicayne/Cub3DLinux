@@ -6,7 +6,7 @@
 #    By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/05 18:22:15 by vmoreau           #+#    #+#              #
-#    Updated: 2020/06/12 16:20:43 by vmoreau          ###   ########.fr        #
+#    Updated: 2020/06/18 14:24:09 by vmoreau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ SRCS += $(SAVE)save_bmp.c
 
 #---------------Ray_cast---------------#
 SRCS +=	$(RAY)init_struct_ray.c		$(RAY)ray_cast.c	$(RAY)cub3d.c		 \
-		$(RAY)sprit_cast.c			$(RAY)sprit_cast2.c
+		$(RAY)sprit_cast.c			$(RAY)sprit_cast2.c $(RAY)check_color.c
 
 #####################################BONUS#####################################
 
@@ -77,7 +77,7 @@ BONU += $(SAVEB)save_bmp.c
 
 #---------------Ray_cast---------------#
 BONU +=	$(RAYB)init_struct_ray.c	$(RAYB)ray_cast.c	$(RAYB)cub3d.c		 \
-		$(RAYB)sprit_cast.c			$(RAYB)sprit_cast2.c
+		$(RAYB)sprit_cast.c			$(RAYB)sprit_cast2.c $(RAYB)check_color.c
 
 #####################################PARTH#####################################
 

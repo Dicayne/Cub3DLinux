@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/08 17:42:46 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/04/08 16:47:36 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/18 14:33:42 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ static int	check_around2(t_map *map, int y, int x)
 	check_v2 = map->map[y - 1][x];
 	check_v3 = map->map[y][x + 1];
 	check_v4 = map->map[y + 1][x];
-	if (check_v1 == 8 || check_v2 == 8 || check_v3 == 8 || check_v4 == 8)
+	if (check_v1 == 8 || check_v2 == 8 || check_v3 == 8 || check_v4 == 8
+		|| check_v1 == 11 || check_v2 == 11 || check_v3 == 11 || check_v4 == 11)
 		return (-1);
 	else
 		return (0);
@@ -80,6 +81,8 @@ static int	check_around(t_map *map, int y, int x)
 				if (check_around2(map, y, x) == -1)
 					return (-1);
 			}
+			if (map->map[y][x] == 5)
+				map->map[y][x] = 0;
 			x++;
 		}
 		y++;

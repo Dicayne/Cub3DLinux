@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/04 17:16:18 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/05/27 19:08:43 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/18 14:26:43 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int				main(int ac, char **av)
 	t_cub3d cub;
 
 	cub.pars.save = 0;
+	cub.bool = 4;
 	if (ac == 2 || ac == 3)
 	{
 		if (check_arg(&cub, ac, av) == -1)
