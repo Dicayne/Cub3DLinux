@@ -37,6 +37,7 @@ int			tab_text(t_image *img)
 		}
 		i++;
 	}
+	img->free = 1;
 	return (0);
 }
 
@@ -57,6 +58,22 @@ int			get_img_info(t_image *img, void *mlx_ptr, char *path_tex)
 		ft_printf("%sTexture Error ==> %s%s%s\n", YELLOW, CYAN, path_tex, NC);
 		return (-1);
 	}
+}
+
+static void	set_bool(t_cub3d *cub)
+{
+	cub->tex.tex_no.free = 0;
+	cub->tex.tex_so.free = 0;
+	cub->tex.tex_ea.free = 0;
+	cub->tex.tex_we.free = 0;
+	cub->tex.tex_s.free = 0;
+	cub->img.free = 0;
+	cub->img2.free = 0;
+	cub->tex.tex_no.path = NULL;
+	cub->tex.tex_so.path = NULL;
+	cub->tex.tex_ea.path = NULL;
+	cub->tex.tex_we.path = NULL;
+	cub->tex.tex_s.path = NULL;
 }
 
 static void	set_images2(t_cub3d *cub)
@@ -89,6 +106,7 @@ static void	set_images2(t_cub3d *cub)
 void		set_images(t_cub3d *cub)
 {
 	cub->tex.weap.path = NULL;
+	set_bool(cub);
 	if (get_img_info(
 				&cub->tex.tex_no, cub->map.mlx_ptr, cub->pars.pars_no) == -1)
 		close_prog(cub);

@@ -119,6 +119,7 @@ typedef struct	s_image
 	int		**tiadr;
 	int		hp;
 	int		g_o;
+	int		free;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;

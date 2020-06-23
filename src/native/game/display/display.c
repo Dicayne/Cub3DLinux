@@ -48,7 +48,7 @@ void		display(t_cub3d *cub)
 		mlx_put_image_to_window(cub->map.mlx_ptr, cub->map.mlx_win,
 					cub->img.img, 0, 0);
 		if (cub->bool == 1)
-			ft_printf("%sGOOD GAME %s:D\n", CYAN, YELLOW);
+			ft_printf("%sGOOD GAME %s:D%s\n", CYAN, YELLOW, NC);
 		cub->bool = 0;
 	}
 	else if (cub->pars.save == 0 && cub->boolimg == 2)

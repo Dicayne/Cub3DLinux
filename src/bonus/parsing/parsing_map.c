@@ -83,7 +83,7 @@ static int	check_line(char **str, int bool, char **join, t_path *pars)
 	{
 		free(*join);
 		free(*str);
-		pars->error = ft_strdup("File ERROR\n");
+		pars->error = ft_strdup("Map ERROR\n");
 		return (-1);
 	}
 	else if (empty == 1 && bool == 1)

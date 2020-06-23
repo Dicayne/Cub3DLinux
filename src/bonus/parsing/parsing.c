@@ -28,7 +28,7 @@ void		free_split(char **split)
 static int	pars_texture(char **split, t_path *pars)
 {
 	if (split[1] == NULL)
-		return (-1);
+		return (-2);
 	if (pars->pars_no == NULL && ft_strcmp(split[0], "NO") == 0)
 		pars->pars_no = ft_strdup(split[1]);
 	else if (pars->pars_so == NULL && ft_strcmp(split[0], "SO") == 0)
@@ -54,7 +54,7 @@ static int	pars_texture(char **split, t_path *pars)
 static int	check_reso(char **split, t_path *pars)
 {
 	if (pars->scrheight != 0 && pars->scrwidth != 0)
-		return (-1);
+		return (-2);
 	if (split[1] != NULL && split[2] != NULL && split[3] == NULL &&
 		strisnum(split[1]) == 1 && strisnum(split[2]) == 1)
 	{
@@ -63,10 +63,10 @@ static int	check_reso(char **split, t_path *pars)
 		if (pars->scrheight > 0 && pars->scrwidth > 0)
 			return (1);
 		else
-			return (-1);
+			return (-2);
 	}
 	else
-		return (-1);
+		return (-2);
 }
 
 static int	pars_line(char **split, t_path *pars)

@@ -22,6 +22,8 @@ void	init_img_struct(t_cub3d *cub)
 	cub->img.img_w = cub->pars.scrwidth;
 	cub->img.iadr = (int*)cub->img.adr;
 	tab_text(&cub->img);
+	cub->img.path = NULL;
+	cub->img.free = 1;
 	cub->img2.img = mlx_new_image(cub->map.mlx_ptr, cub->pars.scrwidth,
 					cub->pars.scrheight);
 	cub->img2.adr = mlx_get_data_addr(cub->img2.img, &cub->img2.bits_per_pixel,
@@ -30,6 +32,8 @@ void	init_img_struct(t_cub3d *cub)
 	cub->img2.img_w = cub->pars.scrwidth;
 	cub->img2.iadr = (int*)cub->img2.adr;
 	tab_text(&cub->img2);
+	cub->img2.path = NULL;
+	cub->img2.free = 1;
 }
 
 void	corec_reso(t_cub3d *cub)

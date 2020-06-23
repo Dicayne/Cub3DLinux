@@ -19,6 +19,7 @@
 # include <unistd.h>
 # include "get_next_line.h"
 # include "ft_printf.h"
+
 /*
 **STRUCTURE
 */

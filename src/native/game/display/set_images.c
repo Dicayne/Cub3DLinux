@@ -37,6 +37,7 @@ int			tab_text(t_image *img)
 		}
 		i++;
 	}
+	img->free = 1;
 	return (0);
 }
 
@@ -46,6 +47,7 @@ int			get_img_info(t_image *img, void *mlx_ptr, char *path_tex)
 									&img->img_h);
 	if (img->img != NULL)
 	{
+		img->path = ft_strdup(path_tex);
 		img->adr = mlx_get_data_addr(img->img, &img->bits_per_pixel,
 								&img->line_length, &img->endian);
 		img->iadr = (int*)img->adr;
@@ -59,9 +61,26 @@ int			get_img_info(t_image *img, void *mlx_ptr, char *path_tex)
 	}
 }
 
+static void	set_bool(t_cub3d *cub)
+{
+	cub->tex.tex_no.free = 0;
+	cub->tex.tex_so.free = 0;
+	cub->tex.tex_ea.free = 0;
+	cub->tex.tex_we.free = 0;
+	cub->tex.tex_s.free = 0;
+	cub->img.free = 0;
+	cub->img2.free = 0;
+	cub->tex.tex_no.path = NULL;
+	cub->tex.tex_so.path = NULL;
+	cub->tex.tex_ea.path = NULL;
+	cub->tex.tex_we.path = NULL;
+	cub->tex.tex_s.path = NULL;
+}
+
 void		set_images(t_cub3d *cub)
 {
 	cub->tex.weap.path = NULL;
+	set_bool(cub);
 	if (get_img_info(
 				&cub->tex.tex_no, cub->map.mlx_ptr, cub->pars.pars_no) == -1)
 		close_prog(cub);

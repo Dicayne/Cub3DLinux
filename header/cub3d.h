@@ -27,6 +27,7 @@
 # include <stdio.h>
 # include <math.h>
 # include "../minilibx-linux/mlx.h"
+# include "../minilibx-linux/mlx_int.h"
 # include "../Libft/header/libft.h"
 # include "color.h"
 # include "struct.h"
