@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 13:34:12 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 16:09:23 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/23 10:58:04 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,6 @@ int			darkness_mode(int color, double wall_dist)
 	g = ((int)((double)0x0 + (g - 0x0) * per) & 0xFF00);
 	b = ((int)((double)0x0 + (b - 0x0) * per) & 0xFF);
 	return (r + g + b);
-}
-
-void		my_mlx_pixel_put(t_image *img, int x, int y, int color)
-{
-	char	*dst;
-
-	dst = img->adr + (y * img->line_length + x * (img->bits_per_pixel / 8));
-	*(int*)dst = color;
 }
 
 void		display(t_cub3d *cub)

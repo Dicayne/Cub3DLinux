@@ -6,7 +6,7 @@
 #    By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/12/05 18:22:15 by vmoreau           #+#    #+#              #
-#    Updated: 2020/06/18 14:24:09 by vmoreau          ###   ########.fr        #
+#    Updated: 2020/06/23 11:18:24 by vmoreau          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,30 +54,30 @@ SRCS +=	$(RAY)init_struct_ray.c		$(RAY)ray_cast.c	$(RAY)cub3d.c		 \
 #####################################BONUS#####################################
 
 #-----------------Main-----------------#
-BONU +=	src/bonus/main.c
+BONU +=	src/native/main.c
 
 #---------------Parsing----------------#
-BONU +=	$(PARSB)init_struct_pars.c	$(PARSB)parsing.c	$(PARSB)parsing_map.c \
-		$(PARSB)utils_parsing.c		$(PARSB)check_map.c	$(PARSB)check_map2.c  \
+BONU +=	$(PARS)init_struct_pars.c	$(PARS)parsing.c	$(PARS)parsing_map.c \
+		$(PARS)utils_parsing.c		$(PARSB)check_map.c	$(PARS)check_map2.c  \
 		$(PARSB)check_sprite.c
 
 #----------------Event-----------------#
-BONU +=	$(EVENTB)init_struct_ev.c	$(EVENTB)move_w_s.c	$(EVENTB)move_a_d.c	 \
-		$(EVENTB)rotate_g_dr.c		$(EVENTB)refresh.c	$(EVENTB)event.c	 \
+BONU +=	$(EVENT)init_struct_ev.c	$(EVENTB)move_w_s.c	$(EVENTB)move_a_d.c	 \
+		$(EVENT)rotate_g_dr.c		$(EVENT)refresh.c	$(EVENTB)event.c	 \
 		$(EVENTB)hook.c				$(EVENTB)utils.c
 
 #---------------Display----------------#
-BONU +=	$(DISPB)init_world.c		$(DISPB)print_img.c	$(DISPB)display.c	 \
+BONU +=	$(DISP)init_world.c			$(DISP)print_img.c	$(DISPB)display.c	 \
 		$(DISPB)put_mini_map.c		$(DISPB)print_go.c	$(DISPB)set_images.c \
 		$(DISPB)print_lifbar.c		$(DISPB)win_lose.c	$(DISPB)print_weap.c \
-		$(DISPB)print_img2.c
+		$(DISP)print_img2.c
 
 #---------------Save_BMP---------------#
-BONU += $(SAVEB)save_bmp.c
+BONU += $(SAVE)save_bmp.c
 
 #---------------Ray_cast---------------#
-BONU +=	$(RAYB)init_struct_ray.c	$(RAYB)ray_cast.c	$(RAYB)cub3d.c		 \
-		$(RAYB)sprit_cast.c			$(RAYB)sprit_cast2.c $(RAYB)check_color.c
+BONU +=	$(RAY)init_struct_ray.c		$(RAY)ray_cast.c	$(RAY)cub3d.c		 \
+		$(RAY)check_color.c			$(RAYB)sprit_cast.c	$(RAYB)sprit_cast2.c
 
 #####################################PARTH#####################################
 

@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 12:10:14 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/18 14:35:25 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/23 10:51:26 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,10 +76,7 @@ static int	pars_line(char **split, t_path *pars)
 	if (split[0] == NULL)
 		ret = 1;
 	else if (ft_strcmp(split[0], "R") == 0)
-	{
 		ret = check_reso(split, pars);
-		printf("%d\n", ret);
-	}
 	else if (ft_strcmp(split[0], "NO") == 0 || ft_strcmp(split[0], "SO") == 0 ||
 			ft_strcmp(split[0], "WE") == 0 || ft_strcmp(split[0], "EA") == 0 ||
 			ft_strcmp(split[0], "S") == 0 || ft_strcmp(split[0], "F") == 0 ||

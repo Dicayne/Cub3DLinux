@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/18 14:45:57 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/18 14:41:20 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/23 11:02:07 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ void			event(t_cub3d *cub)
 	init_speed(&cub->spe);
 	mlx_hook(cub->map.mlx_win, 3, 1L << 1, key_release, &cub->move);
 	mlx_hook(cub->map.mlx_win, 2, 1L << 0, key_hook, cub);
-	mlx_hook(cub->map.mlx_win, 33, 1L << 17, close_prog_cross, cub);
+	mlx_hook(cub->map.mlx_win, 17, 1L << 17, close_prog_cross, cub);
 	mlx_loop_hook(cub->map.mlx_ptr, refresh, cub);
 }

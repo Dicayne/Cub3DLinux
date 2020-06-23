@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/28 14:01:58 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/06/12 18:42:05 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/23 11:00:20 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void		print_img3_2(t_print *print, t_cub3d *cub, int side, int x)
 			my_mlx_pixel_put(&cub->img2, x, print->draw_end, 0);
 		else
 			my_mlx_pixel_put(&cub->img2, x, print->draw_end,
-								print->color_floor);
+							print->color_floor);
 		print->draw_end++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: vmoreau <vmoreau@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/17 13:14:25 by vmoreau           #+#    #+#             */
-/*   Updated: 2020/04/08 16:44:55 by vmoreau          ###   ########.fr       */
+/*   Updated: 2020/06/23 10:58:56 by vmoreau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,12 @@ void		init_world_color(t_cub3d *cub, int *sky, int *floor)
 {
 	*sky = get_color(cub->pars.pars_c);
 	*floor = get_color(cub->pars.pars_f);
+}
+
+void		my_mlx_pixel_put(t_image *img, int x, int y, int color)
+{
+	char	*dst;
+
+	dst = img->adr + (y * img->line_length + x * (img->bits_per_pixel / 8));
+	*(int*)dst = color;
 }
