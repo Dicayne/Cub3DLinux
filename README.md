@@ -17,6 +17,10 @@ $ ./cub3D map_bonus.cub
 * f: Take a screen shot
 * t: turn dark-mode on
 * Space: Fire with weapon on invisible ennemies.(SPAM IT)
+* o or l: Change rotation speed
+* Shift : Sprint
+* x : Sneak
+* Clic on Mini_map and see what’s happen!
  
 # Disclamer
 If the build doesn't work, it's your fault it works on my machines <3
