@@ -6,8 +6,8 @@ The purpose of this game is to find 5 chests while avoiding being killed by fire
 gcc version 7 or clang version 11.00
  
 ```sh
-$ make re
-$ ./cub3D map.cub
+$ make bonus
+$ ./cub3D map_bonus.cub
 ```
  
 # Options in-game
